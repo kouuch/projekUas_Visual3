@@ -157,6 +157,9 @@ padding-bottom:7px;</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">font: 11pt &quot;Poppins&quot;;
 font-weight: 700;

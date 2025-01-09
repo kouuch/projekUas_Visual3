@@ -78,6 +78,7 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(87)
         self.loginbtn.setFont(font)
+        self.loginbtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.loginbtn.setStyleSheet("font: 11pt \"Poppins\";\n"
 "font-weight: 700;\n"
 "\n"
