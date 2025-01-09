@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="images">
+    <file>img/Microsoft Excel.png</file>
+    <file>img/PDF.png</file>
+    <file>img/navbar.png</file>
+    <file>img/Footer.png</file>
+    <file>img/Navbar.png</file>
+    <file>img/header.png</file>
+    <file>img/getStarted.png</file>
+    <file>img/background.png</file>
+    <file>img/logo.png</file>
+    <file>img/bc (140 x 215 piksel).png</file>
+    <file>img/bc-Final.png</file>
+  </qresource>
+</RCC>

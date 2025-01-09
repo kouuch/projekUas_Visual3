@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>706</width>
+    <height>475</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-radius: 30px;</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>704</width>
+     <height>475</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/img/getStarted.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loginButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>420</y>
+     <width>190</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Poppins</family>
+     <pointsize>11</pointsize>
+     <weight>87</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 11pt &quot;Poppins&quot;;
+font-weight: 700;
+border-radius: 8px;
+background: #EF2B2B;
+color:#ffffff;
+cursor: Pointing Hand;
+
+QPushButton #loginButton {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:1, y2:0, 
+        stop:0 rgba(11, 131, 120, 219), 
+        stop:1 rgba(85, 98, 112, 226)
+    );
+    color: rgba(255, 255, 255, 210);
+    border-radius: 5px;
+    border: none;
+}
+
+QPushButton #loginButton:hover {
+    background-color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, 
+        x2:1, y2:0, 
+        stop:0 rgba(150, 123, 111, 219), 
+        stop:1 rgba(85, 81, 84, 226)
+    );
+}
+
+QPushButton #loginButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgba(150, 123, 111, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>L O G I N</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
