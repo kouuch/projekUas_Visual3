@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>561</height>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -139,7 +139,7 @@ padding-bottom:7px;</string>
      <string>Password</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="loginbtn">
     <property name="geometry">
      <rect>
       <x>295</x>

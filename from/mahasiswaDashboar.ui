@@ -94,7 +94,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="dmahasiswabtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -148,7 +148,7 @@ QPushButton #pushButton:pressed {
       <string>DATA MAHASISWA</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="laporanbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -173,7 +173,7 @@ QPushButton #pushButton:pressed {
       <string>LAPORAN</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="logoutbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -195,7 +195,7 @@ QPushButton #pushButton:pressed {
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>LOGOUT</string>
+      <string>LOG OUT</string>
      </property>
     </widget>
    </widget>
@@ -295,7 +295,7 @@ line-height: normal;</string>
        <string>Nama</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="tambahbtn">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -305,7 +305,7 @@ line-height: normal;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_4 {
+       <string notr="true">QPushButton#tambahbtn {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -316,12 +316,12 @@ line-height: normal;</string>
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_4:hover {
+QPushButton#tambahbtn:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_4:pressed {
+QPushButton#tambahbtn:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -332,7 +332,7 @@ QPushButton#pushButton_4:pressed {
        <string>Tambah</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="editbtn">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -342,7 +342,7 @@ QPushButton#pushButton_4:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_5 {
+       <string notr="true">QPushButton#editbtn {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -353,12 +353,12 @@ QPushButton#pushButton_4:pressed {
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_5:hover {
+QPushButton#editbtn:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_5:pressed {
+QPushButton#editbtn:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -368,7 +368,7 @@ QPushButton#pushButton_5:pressed {
        <string>Edit</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="updatebtn">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -378,7 +378,7 @@ QPushButton#pushButton_5:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_6 {
+       <string notr="true">QPushButton#updatebtn {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -389,12 +389,12 @@ QPushButton#pushButton_5:pressed {
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_6:hover {
+QPushButton#updatebtn:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_6:pressed {
+QPushButton#updatebtn:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -404,7 +404,7 @@ QPushButton#pushButton_6:pressed {
        <string>Update</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="hapusbtn">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -414,7 +414,7 @@ QPushButton#pushButton_6:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_7 {
+       <string notr="true">QPushButton#hapusbtn {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -425,12 +425,12 @@ QPushButton#pushButton_6:pressed {
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_7:hover {
+QPushButton#hapusbtn:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_7:pressed {
+QPushButton#hapusbtn:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

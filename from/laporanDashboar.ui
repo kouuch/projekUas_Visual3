@@ -94,7 +94,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="dmahasiswabtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -115,7 +115,7 @@
      <property name="styleSheet">
       <string notr="true">font: 9pt &quot;Poppins&quot;;
 
-QPushButton #pushButton {
+QPushButton #dmahasiswa {
     background-color: qlineargradient(
         spread:pad, 
         x1:0, y1:0, 
@@ -128,7 +128,7 @@ QPushButton #pushButton {
     border: none;
 }
 
-QPushButton #pushButton:hover {
+QPushButton #dmahasiswa:hover {
     background-color: qlineargradient(
         spread:pad, 
         x1:0, y1:0, 
@@ -138,7 +138,7 @@ QPushButton #pushButton:hover {
     );
 }
 
-QPushButton #pushButton:pressed {
+QPushButton #dmahasiswa:pressed {
     padding-left: 5px;
     padding-top: 5px;
     background-color: rgba(150, 123, 111, 255);
@@ -148,7 +148,7 @@ QPushButton #pushButton:pressed {
       <string>DATA MAHASISWA</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="laporanbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -173,7 +173,7 @@ QPushButton #pushButton:pressed {
       <string>LAPORAN</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="logoutbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -195,7 +195,7 @@ QPushButton #pushButton:pressed {
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>LOGOUT</string>
+      <string>LOG OUT</string>
      </property>
     </widget>
    </widget>
@@ -266,7 +266,7 @@ QPushButton #pushButton:pressed {
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="eksporpdf">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -275,8 +275,11 @@ QPushButton #pushButton:pressed {
         <height>23</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_4 {
+       <string notr="true">QPushButton#eksporpdf {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -287,12 +290,12 @@ QPushButton #pushButton:pressed {
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_4:hover {
+QPushButton#eksporpdf:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_4:pressed {
+QPushButton#eksporpdf:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -303,7 +306,7 @@ QPushButton#pushButton_4:pressed {
        <string>Ekspor ke PDF</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="eksporex">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -312,8 +315,11 @@ QPushButton#pushButton_4:pressed {
         <height>23</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_5 {
+       <string notr="true">QPushButton#eksporex {
     background-color: #77D0AA;
     color: white;
     border-radius: 5px;
@@ -324,12 +330,12 @@ QPushButton#pushButton_4:pressed {
     transition: all 0.3s ease;
 }
 
-QPushButton#pushButton_5:hover {
+QPushButton#eksporex:hover {
     background-color: #55B69F;
     transform: scale(1.1);  
 }
 
-QPushButton#pushButton_5:pressed {
+QPushButton#eksporex:pressed {
     background-color: #4A9D83;
     transform: scale(0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

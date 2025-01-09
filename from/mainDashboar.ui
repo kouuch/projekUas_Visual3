@@ -94,7 +94,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="dmahasiswabtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -148,7 +148,7 @@ QPushButton #pushButton:pressed {
       <string>DATA MAHASISWA</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="laporanbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -202,7 +202,7 @@ QPushButton #pushButton:pressed {
       <string>LAPORAN</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="logoutbtn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -253,7 +253,7 @@ QPushButton #pushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>LOGOUT</string>
+      <string>LOG OUT</string>
      </property>
     </widget>
    </widget>
