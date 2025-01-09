@@ -8,7 +8,9 @@ class MainWindow(QMainWindow, Ui_Form):
         super().__init__()
         self.setupUi(self)
         self.mulaibtn.clicked.connect(self.show_login)
+
     def show_login(self):
+        self.hide()
         self.login_window = QWidget()
         self.ui_login = Ui_Login()
         self.ui_login.setupUi(self.login_window)
