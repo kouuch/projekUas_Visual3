@@ -14,7 +14,15 @@ class MainWindow(QMainWindow, Ui_Form):
         self.login_window = QWidget()
         self.ui_login = Ui_Login()
         self.ui_login.setupUi(self.login_window)
+
+        self.ui_login.loginbtn.clicked.connect(self.validate_login)
         self.login_window.show()
+
+    def validate_login(self):
+        d_npm = "2210010202"
+        d_password = "12345678"
+
+        input_npm = self.ui.login.lineEdit
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
