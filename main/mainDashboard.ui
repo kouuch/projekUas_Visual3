@@ -290,7 +290,7 @@ QPushButton #pushButton:pressed {
       <string notr="true">border-image: url(:/images/img/Footer.png);</string>
      </property>
      <property name="text">
-      <string> © 2025 Universitas Islam Kalimantan (UNISKA). Sistem Informasi Pengolaan Data Mahasiswa. Semua hak dilindungi</string>
+      <string/>
      </property>
     </widget>
    </widget>
