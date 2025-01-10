@@ -4,7 +4,7 @@ from getstarted import Ui_Form
 from Login import Ui_Form as Ui_Login
 from mainDashboard import Ui_Dialog
 
-class MainWindow(QMainWindow, Ui_Form, Ui_Dialog):
+class MainWindow(QMainWindow, Ui_Form):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -20,8 +20,8 @@ class MainWindow(QMainWindow, Ui_Form, Ui_Dialog):
         self.login_window.show()
 
     def validate_login(self):
-        d_npm = "2210010202"
-        d_password = "12345678"
+        d_npm = "user"
+        d_password = "1"
 
         input_npm = self.ui_login.lineNpm.text()
         input_password = self.ui_login.linePassword.text()
@@ -34,6 +34,8 @@ class MainWindow(QMainWindow, Ui_Form, Ui_Dialog):
     def show_dashboard(self):
         self.login_window.hide()
         self.dasboard_window = QWidget()
+        self.ui_window = Ui_Dialog()
+        self.ui_window.setupUi(self.dasboard_window)
         self.dasboard_window.show()
 
 if __name__ == "__main__":
