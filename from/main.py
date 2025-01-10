@@ -23,17 +23,7 @@ class MainWindow(QMainWindow, Ui_Form):
         d_password = "12345678"
 
         input_npm = self.ui.login.lineNpm.text()
-        input_password = self.ui_login.linePassword.text()
-
-        if input_npm == d_npm and input_password == d_password:
-            self.show_dashboard()
-        else:
-            QmessageBox.warning(self, "Login Failed", "NPM or Password is incorrect!")
-
-    def show_dashboard(self):
-        self.login_window.hide()
-        self.dasboard_window = QWidget()
-        self.dasboard_window.show()
+        input_password = self.
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
