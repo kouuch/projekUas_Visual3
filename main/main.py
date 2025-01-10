@@ -22,7 +22,7 @@ class MainWindow(QMainWindow, Ui_Form):
         d_npm = "2210010202"
         d_password = "12345678"
 
-        input_npm = self.ui.login.lineNpm.text()
+        input_npm = self.ui_login.lineNpm.text()
         input_password = self.ui_login.linePassword.text()
 
         if input_npm == d_npm and input_password == d_password:
