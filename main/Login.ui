@@ -86,7 +86,7 @@ font-weight: 700;</string>
      <string>Log In</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineNpm">
     <property name="geometry">
      <rect>
       <x>295</x>
@@ -111,7 +111,7 @@ padding-bottom:7px;</string>
      <string>NPM</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="linePassword">
     <property name="geometry">
      <rect>
       <x>295</x>

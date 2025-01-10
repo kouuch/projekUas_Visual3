@@ -46,29 +46,29 @@ class Ui_Form(object):
         self.label_3.setStyleSheet("font: 20pt \"Poppins\";\n"
 "font-weight: 700;")
         self.label_3.setObjectName("label_3")
-        self.lineEdit = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit.setGeometry(QtCore.QRect(295, 150, 190, 40))
+        self.lineNpm = QtWidgets.QLineEdit(self.widget)
+        self.lineNpm.setGeometry(QtCore.QRect(295, 150, 190, 40))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("background-color: rgb(0, 0, 0, 0);\n"
+        self.lineNpm.setFont(font)
+        self.lineNpm.setStyleSheet("background-color: rgb(0, 0, 0, 0);\n"
 "border:none;\n"
 "border-bottom:2px solid #000000;\n"
 "color:rgba(0, 0, 0, 240);\n"
 "padding-bottom:7px;")
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(295, 215, 190, 40))
+        self.lineNpm.setObjectName("lineNpm")
+        self.linePassword = QtWidgets.QLineEdit(self.widget)
+        self.linePassword.setGeometry(QtCore.QRect(295, 215, 190, 40))
         font = QtGui.QFont()
         font.setPointSize(10)
-        self.lineEdit_2.setFont(font)
-        self.lineEdit_2.setStyleSheet("background-color: rgb(0, 0, 0, 0);\n"
+        self.linePassword.setFont(font)
+        self.linePassword.setStyleSheet("background-color: rgb(0, 0, 0, 0);\n"
 "border:none;\n"
 "border-bottom:2px solid #000000;\n"
 "color:rgba(0, 0, 0, 240);\n"
 "padding-bottom:7px;")
-        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.linePassword.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.linePassword.setObjectName("linePassword")
         self.loginbtn = QtWidgets.QPushButton(self.widget)
         self.loginbtn.setGeometry(QtCore.QRect(295, 295, 190, 40))
         font = QtGui.QFont()
@@ -123,7 +123,7 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label_3.setText(_translate("Form", "Log In"))
-        self.lineEdit.setPlaceholderText(_translate("Form", "NPM"))
-        self.lineEdit_2.setPlaceholderText(_translate("Form", "Password"))
+        self.lineNpm.setPlaceholderText(_translate("Form", "NPM"))
+        self.linePassword.setPlaceholderText(_translate("Form", "Password"))
         self.loginbtn.setText(_translate("Form", "L O G I N"))
 import res_rc
