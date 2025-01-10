@@ -1,9 +1,10 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox
 from getstarted import Ui_Form
 from Login import Ui_Form as Ui_Login
+from mainDashboard import Ui_Dialog
 
-class MainWindow(QMainWindow, Ui_Form):
+class MainWindow(QMainWindow, Ui_Form, Ui_Dialog):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -28,7 +29,7 @@ class MainWindow(QMainWindow, Ui_Form):
         if input_npm == d_npm and input_password == d_password:
             self.show_dashboard()
         else:
-            QmessageBox.warning(self, "Login Failed", "NPM or Password is incorrect!")
+            QMessageBox.warning(self, "Login Failed", "NPM or Password is incorrect!")
 
     def show_dashboard(self):
         self.login_window.hide()

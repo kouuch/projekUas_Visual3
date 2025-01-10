@@ -324,7 +324,7 @@ QPushButton #pushButton:pressed {
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="jmlMahasiswa_label">
       <property name="geometry">
        <rect>
         <x>240</x>
