@@ -36,8 +36,8 @@ class MainWindow(QMainWindow, Ui_Form):
         self.dasboard_window = QWidget()
         self.ui_window = Ui_mainDashboard()
         self.ui_window.setupUi(self.dasboard_window)
-
-        self.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
+        # btn
+        self.ui_window.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
         self.dasboard_window.show()
 
     def show_mahasiswa_dashboard(self):
