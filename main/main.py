@@ -45,6 +45,7 @@ class MainWindow(QMainWindow, Ui_Form):
         self.mahasiswa_dashboard_window = QWidget()
         self.ui_mahasiswa_dashboard_window = Ui_mahasiswaDashboard()
         self.ui_mahasiswa_dashboard_window.setupUi(self.mahasiswa_dashboard_window)
+        
         self.mahasiswa_dashboard_window.show()
 
 
