@@ -31,7 +31,7 @@ def get_mahasiswa():
 def up_mahasiswa(id_mahasiswa, nama, npm, jurusan, alamat):
     connection = create_connnection()
     cursor = connection.cursor()
-    querry ="UPDATE tb_mahasiswa SET nm_mahasiswa=%s, npm%s, jurusan%s, alamat%s WHERE id_mahasiswa%s"
+    querry ="UPDATE tb_mahasiswa SET nm_mahasiswa%s, npm%s, jurusan%s, alamat%s WHERE id_mahasiswa%s"
     values = (nama, npm, jurusan, alamat, id_mahasiswa)
     cursor.execute(querry, values)
     connection.commit()

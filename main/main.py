@@ -5,6 +5,8 @@ from Login import Ui_Form as Ui_Login
 from mainDashboard import Ui_Dialog as Ui_mainDashboard
 from mahasiswaDashboard import Ui_Dialog as Ui_mahasiswaDashboard
 from laporanDashboard import Ui_Dialog as Ui_laporan
+from database import add_mahasiswa, up_mahasiswa, del_mahasiswa, get_mahasiswa
+
 class MainWindow(QMainWindow, Ui_Form):
     def __init__(self):
         super().__init__()
@@ -54,9 +56,20 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_mahasiswa_dashboard_window = Ui_mahasiswaDashboard()
         self.ui_mahasiswa_dashboard_window.setupUi(self.mahasiswa_dashboard_window)
         
+        self.ui_mahasiswa_dashboard_window.tambahbtn.clicked.connect(self.add_data_mahasiswa)
+
         self.ui_mahasiswa_dashboard_window.laporanbtn.clicked.connect(self.show_laporan_dashboard)
         self.ui_mahasiswa_dashboard_window.logoutbtn.clicked.connect(self.logout)
         self.mahasiswa_dashboard_window.show()
+
+    def add_data_mahasiswa(self):
+        nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
+        npm = self.ui_mahasiswa_dashboard_window.lineNpminput.text()
+        jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.currentText()
+        alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.text()
+
+        add_mahasiswa(nama, npm, jurusan, alamat)
+        QMessageBox.warning(self, "Data Berhasil di Tambahkan")
 
     def show_laporan_dashboard(self):
         self.dasboard_window.hide()
@@ -69,6 +82,7 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_laporan_dashboard_window.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
         self.ui_laporan_dashboard_window.logoutbtn.clicked.connect(self.logout)
         self.laporan_dashboard_window.show()
+
 
     def logout(self):
         QApplication.quit()
