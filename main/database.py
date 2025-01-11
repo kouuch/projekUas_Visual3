@@ -37,3 +37,12 @@ def up_mahasiswa(id_mahasiswa, nama, npm, jurusan, alamat):
     connection.commit()
     cursor.close()
     connection.close()
+
+def del_mahasiswa(id_mahasiswa):
+    connection = create_connnection()
+    cursor = connection.cursor()
+    querry ="DELETE tb_mahasiswa WHERE id_mahasiswa%s)"
+    cursor.execute(querry, (id_mahasiswa,))
+    connection.commit()
+    cursor.close()
+    connection.close()
