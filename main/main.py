@@ -65,7 +65,8 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_laporan_dashboard_window = Ui_laporan()
         self.ui_laporan_dashboard_window.setupUi(self.laporan_dashboard_window)
 
-        self.ui_window.logoutbtn.clicked.connect(self.logout)
+        self.ui_laporan_dashboard_window.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
+        self.ui_laporan_dashboard_window.logoutbtn.clicked.connect(self.logout)
         self.laporan_dashboard_window.show()
 
     def logout(self):
