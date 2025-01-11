@@ -238,16 +238,16 @@ class Ui_Dialog(object):
 "    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n"
 "}")
         self.hapusbtn.setObjectName("hapusbtn")
-        self.lineEdit = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit.setGeometry(QtCore.QRect(108, 60, 502, 22))
-        self.lineEdit.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.lineNama = QtWidgets.QLineEdit(self.widget)
+        self.lineNama.setGeometry(QtCore.QRect(108, 60, 502, 22))
+        self.lineNama.setStyleSheet("font: 9pt \"Poppins\";\n"
 "flex-shrink: 0;\n"
 "border-radius: 4px;\n"
 "border: 0.5px solid #000;\n"
 "\n"
 "background: #FFF;")
-        self.lineEdit.setText("")
-        self.lineEdit.setObjectName("lineEdit")
+        self.lineNama.setText("")
+        self.lineNama.setObjectName("lineNama")
         self.label_5 = QtWidgets.QLabel(self.widget)
         self.label_5.setGeometry(QtCore.QRect(18, 90, 71, 16))
         font = QtGui.QFont()
@@ -263,16 +263,16 @@ class Ui_Dialog(object):
 "font-weight: 400;\n"
 "line-height: normal;")
         self.label_5.setObjectName("label_5")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(108, 90, 502, 22))
-        self.lineEdit_2.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.lineNpminput = QtWidgets.QLineEdit(self.widget)
+        self.lineNpminput.setGeometry(QtCore.QRect(108, 90, 502, 22))
+        self.lineNpminput.setStyleSheet("font: 9pt \"Poppins\";\n"
 "flex-shrink: 0;\n"
 "border-radius: 4px;\n"
 "border: 0.5px solid #000;\n"
 "\n"
 "background: #FFF;")
-        self.lineEdit_2.setText("")
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineNpminput.setText("")
+        self.lineNpminput.setObjectName("lineNpminput")
         self.label_6 = QtWidgets.QLabel(self.widget)
         self.label_6.setGeometry(QtCore.QRect(18, 120, 71, 16))
         font = QtGui.QFont()
@@ -289,19 +289,19 @@ class Ui_Dialog(object):
 "font-weight: 400;\n"
 "line-height: normal;")
         self.label_6.setObjectName("label_6")
-        self.comboBox = QtWidgets.QComboBox(self.widget)
-        self.comboBox.setGeometry(QtCore.QRect(108, 120, 502, 22))
-        self.comboBox.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.cmbJurusan = QtWidgets.QComboBox(self.widget)
+        self.cmbJurusan.setGeometry(QtCore.QRect(108, 120, 502, 22))
+        self.cmbJurusan.setStyleSheet("font: 9pt \"Poppins\";\n"
 "border-radius: 4px;\n"
 "border: 0.5px solid #000;\n"
 "\n"
 "background: #FFF;")
-        self.comboBox.setEditable(False)
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
+        self.cmbJurusan.setEditable(False)
+        self.cmbJurusan.setObjectName("cmbJurusan")
+        self.cmbJurusan.addItem("")
+        self.cmbJurusan.addItem("")
+        self.cmbJurusan.addItem("")
+        self.cmbJurusan.addItem("")
         self.label_7 = QtWidgets.QLabel(self.widget)
         self.label_7.setGeometry(QtCore.QRect(18, 150, 71, 16))
         font = QtGui.QFont()
@@ -318,34 +318,34 @@ class Ui_Dialog(object):
 "font-weight: 400;\n"
 "line-height: normal;")
         self.label_7.setObjectName("label_7")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(108, 150, 502, 22))
-        self.lineEdit_3.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.lineAlamat = QtWidgets.QLineEdit(self.widget)
+        self.lineAlamat.setGeometry(QtCore.QRect(108, 150, 502, 22))
+        self.lineAlamat.setStyleSheet("font: 9pt \"Poppins\";\n"
 "flex-shrink: 0;\n"
 "border-radius: 4px;\n"
 "border: 0.5px solid #000;\n"
 "\n"
 "background: #FFF;")
-        self.lineEdit_3.setText("")
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.tableWidget = QtWidgets.QTableWidget(self.widget)
-        self.tableWidget.setGeometry(QtCore.QRect(20, 200, 601, 251))
-        self.tableWidget.setStyleSheet("font: 9pt \"Poppins\";\n"
+        self.lineAlamat.setText("")
+        self.lineAlamat.setObjectName("lineAlamat")
+        self.tbldmahasiswa = QtWidgets.QTableWidget(self.widget)
+        self.tbldmahasiswa.setGeometry(QtCore.QRect(20, 200, 601, 251))
+        self.tbldmahasiswa.setStyleSheet("font: 9pt \"Poppins\";\n"
 "color: #000;\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "line-height: normal;")
-        self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(4)
-        self.tableWidget.setRowCount(0)
+        self.tbldmahasiswa.setObjectName("tbldmahasiswa")
+        self.tbldmahasiswa.setColumnCount(4)
+        self.tbldmahasiswa.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, item)
+        self.tbldmahasiswa.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, item)
+        self.tbldmahasiswa.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, item)
+        self.tbldmahasiswa.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, item)
+        self.tbldmahasiswa.setHorizontalHeaderItem(3, item)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -361,22 +361,22 @@ class Ui_Dialog(object):
         self.editbtn.setText(_translate("Dialog", "Edit"))
         self.updatebtn.setText(_translate("Dialog", "Update"))
         self.hapusbtn.setText(_translate("Dialog", "Hapus"))
-        self.lineEdit.setPlaceholderText(_translate("Dialog", "  Masukan Nama"))
+        self.lineNama.setPlaceholderText(_translate("Dialog", "  Masukan Nama"))
         self.label_5.setText(_translate("Dialog", "NPM"))
-        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "  Masukan NPM"))
+        self.lineNpminput.setPlaceholderText(_translate("Dialog", "  Masukan NPM"))
         self.label_6.setText(_translate("Dialog", "Jurusan"))
-        self.comboBox.setItemText(0, _translate("Dialog", "Teknik Informatika"))
-        self.comboBox.setItemText(1, _translate("Dialog", "Manajemen"))
-        self.comboBox.setItemText(2, _translate("Dialog", "Hukum"))
-        self.comboBox.setItemText(3, _translate("Dialog", "Ekonomi"))
+        self.cmbJurusan.setItemText(0, _translate("Dialog", "Teknik Informatika"))
+        self.cmbJurusan.setItemText(1, _translate("Dialog", "Manajemen"))
+        self.cmbJurusan.setItemText(2, _translate("Dialog", "Hukum"))
+        self.cmbJurusan.setItemText(3, _translate("Dialog", "Ekonomi"))
         self.label_7.setText(_translate("Dialog", "Alamat"))
-        self.lineEdit_3.setPlaceholderText(_translate("Dialog", "  Masukan Alamat"))
-        item = self.tableWidget.horizontalHeaderItem(0)
+        self.lineAlamat.setPlaceholderText(_translate("Dialog", "  Masukan Alamat"))
+        item = self.tbldmahasiswa.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Nama"))
-        item = self.tableWidget.horizontalHeaderItem(1)
+        item = self.tbldmahasiswa.horizontalHeaderItem(1)
         item.setText(_translate("Dialog", "NPM"))
-        item = self.tableWidget.horizontalHeaderItem(2)
+        item = self.tbldmahasiswa.horizontalHeaderItem(2)
         item.setText(_translate("Dialog", "Jurusan"))
-        item = self.tableWidget.horizontalHeaderItem(3)
+        item = self.tbldmahasiswa.horizontalHeaderItem(3)
         item.setText(_translate("Dialog", "Alamat"))
 import res_rc
