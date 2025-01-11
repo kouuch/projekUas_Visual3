@@ -11,6 +11,10 @@ class MainWindow(QMainWindow, Ui_Form):
         self.setupUi(self)
         self.mulaibtn.clicked.connect(self.show_login)
 
+        self.dasboard_window = None
+        self.mahasiswa_dashboard_window = None
+        self.laporan_dashboard_window = None
+
     def show_login(self):
         self.hide()
         self.login_window = QWidget()
@@ -44,18 +48,23 @@ class MainWindow(QMainWindow, Ui_Form):
 
     def show_mahasiswa_dashboard(self):
         self.dasboard_window.hide()
+        self.laporan_dashboard_window.hide()
         self.mahasiswa_dashboard_window = QWidget()
         self.ui_mahasiswa_dashboard_window = Ui_mahasiswaDashboard()
         self.ui_mahasiswa_dashboard_window.setupUi(self.mahasiswa_dashboard_window)
         
+        self.ui_mahasiswa_dashboard_window.laporanbtn.clicked.connect(self.show_laporan_dashboard)
+        self.ui_mahasiswa_dashboard_window.logoutbtn.clicked.connect(self.logout)
         self.mahasiswa_dashboard_window.show()
 
     def show_laporan_dashboard(self):
         self.dasboard_window.hide()
+        self.mahasiswa_dashboard_window.hide()
         self.laporan_dashboard_window = QWidget()
         self.ui_laporan_dashboard_window = Ui_laporan()
         self.ui_laporan_dashboard_window.setupUi(self.laporan_dashboard_window)
 
+        self.ui_window.logoutbtn.clicked.connect(self.logout)
         self.laporan_dashboard_window.show()
 
     def logout(self):
