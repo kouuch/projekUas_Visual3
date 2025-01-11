@@ -19,3 +19,11 @@ def add_mahasiswa(nama, npm, jurusan, alamat):
     cursor.close()
     connection.close()
 
+def get_mahasiswa():
+    connection = create_connnection()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM tb_mahasiswa")
+    result = cursor.fetchall()
+    cursor.close()
+    connection.close()
+    return result
