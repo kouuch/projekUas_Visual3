@@ -60,7 +60,8 @@ class MainWindow(QMainWindow, Ui_Form):
 
     def show_laporan_dashboard(self):
         self.dasboard_window.hide()
-        self.mahasiswa_dashboard_window.hide()
+        if self.mahasiswa_dashboard_window:
+            self.mahasiswa_dashboard_window.hide()
         self.laporan_dashboard_window = QWidget()
         self.ui_laporan_dashboard_window = Ui_laporan()
         self.ui_laporan_dashboard_window.setupUi(self.laporan_dashboard_window)
