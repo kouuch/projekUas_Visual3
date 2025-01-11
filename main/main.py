@@ -2,7 +2,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox
 from getstarted import Ui_Form
 from Login import Ui_Form as Ui_Login
-from mainDashboard import Ui_Dialog
+from mainDashboard import Ui_Dialog as Ui_mainDashboard
+from mahasiswaDashboard import Ui_Dialog as Ui_mahasiswaDashboard
 
 class MainWindow(QMainWindow, Ui_Form):
     def __init__(self):
@@ -33,9 +34,19 @@ class MainWindow(QMainWindow, Ui_Form):
     def show_dashboard(self):
         self.login_window.hide()
         self.dasboard_window = QWidget()
-        self.ui_window = Ui_Dialog()
+        self.ui_window = Ui_mainDashboard()
         self.ui_window.setupUi(self.dasboard_window)
+
+        self.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
         self.dasboard_window.show()
+
+    def show_mahasiswa_dashboard(self):
+        self.dasboard_window.hide()
+        self.mahasiswa_dashboard_window = QWidget()
+        self.ui_mahasiswa_dashboard_window = Ui_mahasiswaDashboard()
+        self.ui_mahasiswa_dashboard_window.setupUi(self.mahasiswa_dashboard_window)
+        self.mahasiswa_dashboard_window.show()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

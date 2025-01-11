@@ -440,7 +440,7 @@ QPushButton#hapusbtn:pressed {
        <string>Hapus</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="lineNama">
       <property name="geometry">
        <rect>
         <x>108</x>
@@ -493,7 +493,7 @@ line-height: normal;</string>
        <string>NPM</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="lineNpminput">
       <property name="geometry">
        <rect>
         <x>108</x>
@@ -547,7 +547,7 @@ line-height: normal;</string>
        <string>Jurusan</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="cmbJurusan">
       <property name="geometry">
        <rect>
         <x>108</x>
@@ -617,7 +617,7 @@ line-height: normal;</string>
        <string>Alamat</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="lineAlamat">
       <property name="geometry">
        <rect>
         <x>108</x>
@@ -641,7 +641,7 @@ background: #FFF;</string>
        <string>  Masukan Alamat</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="tbldmahasiswa">
       <property name="geometry">
        <rect>
         <x>20</x>
