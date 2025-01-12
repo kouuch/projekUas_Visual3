@@ -3,7 +3,7 @@ from reportlab.pdfgen import canvas
 from database import get_mahasiswa
 from PyQt5.QtWidgets import QMessageBox
 
-def ekport_to_pdf():
+def export_to_pdf():
     file_path = "data_mahasiswa.pdf"
     c = canvas.Canvas(file_path, pagesize=letter)
 
