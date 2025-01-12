@@ -61,7 +61,6 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_mahasiswa_dashboard_window.hapusbtn.clicked.connect(self.delete_mahasiswa)
         self.show_data_mahasiswa()
         self.ui_mahasiswa_dashboard_window.tbldmahasiswa.cellDoubleClicked.connect(self.on_table_klik)
-        
 
         self.ui_mahasiswa_dashboard_window.laporanbtn.clicked.connect(self.show_laporan_dashboard)
         self.ui_mahasiswa_dashboard_window.logoutbtn.clicked.connect(self.logout)
