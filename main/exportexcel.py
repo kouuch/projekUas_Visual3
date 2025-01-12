@@ -29,7 +29,7 @@ def export_to_excel(self):
     df = pd.DataFrame(data)
 
     try:
-        df.to_excel(file_path, index=False,engine='openpyxl')
-        QMessageBox.information(self,"Informasi", f"Data berhasil diekpor ke {file_path}")
+        df.to_excel(file_path, index=False, engine='openpyxl')
+        QMessageBox.information(self, "Informasi", f"Data berhasil diekspor ke {file_path}")
     except Exception as e:
-        QMessageBox.warning(self, "Informasi",f"Gagal mengekspor dataa le Excel: {e}")
+        QMessageBox.warning(self, "Informasi", f"Gagal mengekspor data ke Excel: {e}")
