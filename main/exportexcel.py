@@ -5,7 +5,7 @@ from database import get_mahasiswa
 
 def export_to_excel(self):
     folder_path = "exportExcel"
-    if not os.patg.exits(folder_path):
+    if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     
     file_path = os.path.join(folder_path, "data_mahasiswa.xlsx")
