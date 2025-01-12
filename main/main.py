@@ -149,9 +149,6 @@ class MainWindow(QMainWindow, Ui_Form):
             for column_number, data in enumerate(row_data):
                 self.ui_mahasiswa_dashboard_window.tbldmahasiswa.setItem(row_number,column_number, QTableWidgetItem(str(data)))
 
-            
-        
-#kode di bawah
     def show_laporan_dashboard(self):
         self.dasboard_window.hide()
         if self.mahasiswa_dashboard_window:
