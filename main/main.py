@@ -89,6 +89,8 @@ class MainWindow(QMainWindow, Ui_Form):
 
 
     def update_mahasiswa(self):
+        if self.show_data_mahasiswa(nama, npm, jurusan, alamat).clicked.connect()
+
         nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
         npm = self.ui_mahasiswa_dashboard_window.lineNpminput.text()
         jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.currentText()
