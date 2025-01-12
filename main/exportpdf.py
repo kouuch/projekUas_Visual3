@@ -34,5 +34,9 @@ def export_to_pdf():
         c.drawString(450, y_position, str(row_data[4]))
         y_position-= 20
 
+        if y_position < 100:
+            c.showPage()
+            y_position = 750
+
     c.save()
     QMessageBox.information(None, "Informasi", f"Data berhasil di eksport ke{file_path}")
