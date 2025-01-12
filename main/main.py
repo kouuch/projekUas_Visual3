@@ -121,7 +121,6 @@ class MainWindow(QMainWindow, Ui_Form):
             self.show_data_mahasiswa()
         except Exception as e:
             QMessageBox.warning(self,"Informasi", "Gagal Mengedit Data: {e}")
-# delete
 
     def on_table_klik(self):
             row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
@@ -152,10 +151,6 @@ class MainWindow(QMainWindow, Ui_Form):
                         self.show_data_mahasiswa()
                     except Exception as e:
                         QMessageBox.warning(self, "Informasi",f"Gagal di hapus: {e}")
-
-
-        QMessageBox.information(self,"" , "Data Berhasil di Hapus")
-        self.show_data_mahasiswa()
 
     def show_data_mahasiswa(self):
         mahasiswa_list = get_mahasiswa()
