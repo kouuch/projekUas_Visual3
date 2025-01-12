@@ -3,7 +3,7 @@ import os
 from PyQt5.QtWidgets import QMessageBox
 from database import get_mahasiswa
 
-def export_to_excel(self):
+def export_to_excel():
     folder_path = "exportExcel"
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
@@ -30,6 +30,6 @@ def export_to_excel(self):
 
     try:
         df.to_excel(file_path, index=False, engine='openpyxl')
-        QMessageBox.information(self, "Informasi", f"Data berhasil diekspor ke {file_path}")
+        QMessageBox.information(None, "Informasi", f"Data berhasil diekspor ke {file_path}")
     except Exception as e:
-        QMessageBox.warning(self, "Informasi", f"Gagal mengekspor data ke Excel: {e}")
+        QMessageBox.warning(None, "Informasi", f"Gagal mengekspor data ke Excel: {e}")
