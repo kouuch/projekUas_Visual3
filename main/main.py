@@ -124,9 +124,21 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_laporan_dashboard_window = Ui_laporan()
         self.ui_laporan_dashboard_window.setupUi(self.laporan_dashboard_window)
 
+        self.show_data_mahasiswa()
+
         self.ui_laporan_dashboard_window.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
         self.ui_laporan_dashboard_window.logoutbtn.clicked.connect(self.logout)
         self.laporan_dashboard_window.show()
+
+    def show_data_mahasiswa(self):
+        mahasiswa_list = get_mahasiswa()
+        
+        self.ui_laporan_dashboard_window.tbldmahasiswa.setRowCount(0)
+
+        for row_number, row_data in enumerate(mahasiswa_list):
+            self.ui_laporan_dashboard_window.tbldmahasiswa.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.ui_laporan_dashboard_window.tbldmahasiswa.setItem(row_number,column_number, QTableWidgetItem(str(data)))
 
 
     def logout(self):
