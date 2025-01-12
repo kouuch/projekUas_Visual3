@@ -659,6 +659,11 @@ line-height: normal;</string>
       </property>
       <column>
        <property name="text">
+        <string>No</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Nama</string>
        </property>
       </column>

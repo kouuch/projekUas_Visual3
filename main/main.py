@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QTableWidgetItem
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QTableWidgetItem, QTableWidget
 from getstarted import Ui_Form
 from Login import Ui_Form as Ui_Login
 from mainDashboard import Ui_Dialog as Ui_mainDashboard
@@ -57,6 +57,9 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_mahasiswa_dashboard_window.setupUi(self.mahasiswa_dashboard_window)
         
         self.ui_mahasiswa_dashboard_window.tambahbtn.clicked.connect(self.add_data_mahasiswa)
+        self.ui_mahasiswa_dashboard_window.editbtn.clicked.connect(self.update_mahasiswa)
+        self.ui_mahasiswa_dashboard_window.hapusbtn.clicked.connect(self.delete_mahasiswa)
+        self.show_data_mahasiswa()
 
         self.ui_mahasiswa_dashboard_window.laporanbtn.clicked.connect(self.show_laporan_dashboard)
         self.ui_mahasiswa_dashboard_window.logoutbtn.clicked.connect(self.logout)
@@ -68,8 +71,22 @@ class MainWindow(QMainWindow, Ui_Form):
         jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.currentText()
         alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.text()
 
-        add_mahasiswa(nama, npm, jurusan, alamat)
-        QMessageBox.information(self, "Data Berhasil di Tambahkan")
+        if not nama or not npm or not jurusan or not alamat:
+            QMessageBox.warning(self,"Informasi", "semua data harus diisi")
+            return
+        
+        try:
+            add_mahasiswa(nama, npm, jurusan, alamat)
+            QMessageBox.information(self,"Informasi", "Data Berhasil di Tambahkan")
+
+            nama = self.ui_mahasiswa_dashboard_window.lineNama.clear()
+            npm = self.ui_mahasiswa_dashboard_window.lineNpminput.clear()
+            alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.clear()
+            jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.currentText(0)
+        except Exception as e:
+            QMessageBox.warning(self,"Informasi", f"Gagal Menambah Data: {e}")
+
+
 
     def update_mahasiswa(self):
         nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
