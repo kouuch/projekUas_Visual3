@@ -118,14 +118,44 @@ class MainWindow(QMainWindow, Ui_Form):
         try:
             up_mahasiswa(self.selected_id_mahasiswa, nama, npm, jurusan, alamat)
             QMessageBox.information(self,"Informasi", "Data Berhasil di Edit")
+            self.show_data_mahasiswa()
         except Exception as e:
             QMessageBox.warning(self,"Informasi", "Gagal Mengedit Data: {e}")
+# delete
 
+    def on_table_klik(self):
+            row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
+            if row!= -1:
+                id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 0).text()
+                nama = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 1).text()
+                npm = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 2).text()
+                jurusan = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 3).text()
+                alamat = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 4).text()
+                
+                nama = self.ui_mahasiswa_dashboard_window.lineNama.setText(nama)
+                npm = self.ui_mahasiswa_dashboard_window.lineNpminput.setText(npm)
+                jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentText(jurusan)
+                alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.setText(alamat)
+
+                self.selected_id_mahasiswa = id_mahasiswa
     def delete_mahasiswa(self):
-        id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.setRowCount(0)
+        row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
+        if row!= -1:
+                id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 0).text()
+                
+                reply = QMessageBox.question(self, "konfirmasi", "Apakah Anda Yakin Ingi Menghapus Data Ini?" , QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
-        up_mahasiswa(id_mahasiswa)
-        QMessageBox.information(self, "Data Berhasil di Hapus")
+                if reply == QMessageBox.Yes:
+                    try:
+                        del_mahasiswa(id_mahasiswa)
+                        QMessageBox.information(self,"Informasi","Data Berhasil di hapus")
+                        self.show_data_mahasiswa()
+                    except Exception as e:
+                        QMessageBox.warning(self, "Informasi",f"Gagal di hapus: {e}")
+
+
+        QMessageBox.information(self,"" , "Data Berhasil di Hapus")
+        self.show_data_mahasiswa()
 
     def show_data_mahasiswa(self):
         mahasiswa_list = get_mahasiswa()
