@@ -1,5 +1,6 @@
 from xhtml2pdf import pisa
 from database import get_mahasiswa
+from PyQt5.QtWidgets import QMessageBox
 import os
 
 def export_to_pdf():
@@ -15,7 +16,6 @@ def export_to_pdf():
         file_path = os.path.join(directory, f"{base_filename}_{counter}{file_extension}")
         counter += 1
 
-    # Template HTML
     html_template = """
     <!DOCTYPE html>
     <html>
@@ -49,24 +49,29 @@ def export_to_pdf():
     </html>
     """
 
-    # Data mahasiswa
-    mahasiswa_list = get_mahasiswa()
-    table_rows = ""
-    for row in mahasiswa_list:
-        table_rows += f"""
-            <tr>
-                <td>{row[0]}</td>
-                <td>{row[1]}</td>
-                <td>{row[2]}</td>
-                <td>{row[3]}</td>
-                <td>{row[4]}</td>
-            </tr>
-        """
+    try:
+        mahasiswa_list = get_mahasiswa()
+        table_rows = ""
+        for row in mahasiswa_list:
+            table_rows += f"""
+                <tr>
+                    <td>{row[0]}</td>
+                    <td>{row[1]}</td>
+                    <td>{row[2]}</td>
+                    <td>{row[3]}</td>
+                    <td>{row[4]}</td>
+                </tr>
+            """
 
-    html_content = html_template.replace("{{table_rows}}", table_rows)
+        html_content = html_template.replace("{{table_rows}}", table_rows)
 
-    # Konversi HTML ke PDF
-    with open(file_path, "w+b") as result_file:
-        pisa.CreatePDF(src=html_content, dest=result_file)
+        with open(file_path, "w+b") as result_file:
+            pisa_status = pisa.CreatePDF(src=html_content, dest=result_file)
 
-    print(f"Data berhasil diekspor ke {file_path}")
+        if pisa_status.err:
+            QMessageBox.warning(None, "Gagal", "Ekspor PDF gagal. Silakan coba lagi.")
+        else:
+            QMessageBox.information(None, "Berhasil", f"Data berhasil diekspor ke: {file_path}")
+
+    except Exception as e:
+        QMessageBox.critical(None, "Error", f"Terjadi kesalahan: {str(e)}")
