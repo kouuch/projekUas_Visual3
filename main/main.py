@@ -104,21 +104,6 @@ class MainWindow(QMainWindow, Ui_Form):
 
             self.selected_id_mahasiswa = id_mahasiswa
 
-    def on_table_klik(self):
-            row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
-            if row!= -1:
-                id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 0).text()
-                nama = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 1).text()
-                npm = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 2).text()
-                jurusan = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 3).text()
-                alamat = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 4).text()
-                
-                nama = self.ui_mahasiswa_dashboard_window.lineNama.setText(nama)
-                npm = self.ui_mahasiswa_dashboard_window.lineNpminput.setText(npm)
-                jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentText(jurusan)
-                alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.setText(alamat)
-
-                self.selected_id_mahasiswa = id_mahasiswa
 
     def update_mahasiswa(self):
         nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
