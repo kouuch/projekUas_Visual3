@@ -9,7 +9,7 @@ def export_to_pdf():
     if not os.path.exists(directory):
         os.makedirs(directory)
         
-    file_path = "data_mahasiswa.pdf"
+    file_path = os.path.join(directory, "data_mahasiswa.pdf")
     c = canvas.Canvas(file_path, pagesize=letter)
 
     c.setFont("Helvetica-Bold", 16)
@@ -34,5 +34,5 @@ def export_to_pdf():
         c.drawString(450, y_position, str(row_data[4]))
         y_position-= 20
 
-    c.save
+    c.save()
     QMessageBox.information(None, "Informasi", f"Data berhasil di eksport ke{file_path}")
