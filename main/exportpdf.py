@@ -2,8 +2,13 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from database import get_mahasiswa
 from PyQt5.QtWidgets import QMessageBox
+import os
 
 def export_to_pdf():
+    directory = "exportpdf"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        
     file_path = "data_mahasiswa.pdf"
     c = canvas.Canvas(file_path, pagesize=letter)
 
