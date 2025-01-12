@@ -73,19 +73,20 @@ class MainWindow(QMainWindow, Ui_Form):
         alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.text()
 
         if not nama or not npm or not jurusan or not alamat:
-            QMessageBox.warning(self,"Informasi", "semua data harus diisi")
+            QMessageBox.warning(self, "Informasi", "semua data harus diisi")
             return
         
         try:
             add_mahasiswa(nama, npm, jurusan, alamat)
             QMessageBox.information(self,"Informasi", "Data Berhasil di Tambahkan")
+            self.show_data_mahasiswa()
 
             self.ui_mahasiswa_dashboard_window.lineNama.clear()
             self.ui_mahasiswa_dashboard_window.lineNpminput.clear()
             self.ui_mahasiswa_dashboard_window.lineAlamat.clear()
             self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentIndex(0)
         except Exception as e:
-            QMessageBox.warning(self,"Informasi", "Gagal Menambah Data: {e}")
+            QMessageBox.warning(self, "Informasi", f"Gagal Menambah Data: {e}")
 
     def on_table_klik(self):
         row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
@@ -103,6 +104,21 @@ class MainWindow(QMainWindow, Ui_Form):
 
             self.selected_id_mahasiswa = id_mahasiswa
 
+    def on_table_klik(self):
+            row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
+            if row!= -1:
+                id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 0).text()
+                nama = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 1).text()
+                npm = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 2).text()
+                jurusan = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 3).text()
+                alamat = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 4).text()
+                
+                nama = self.ui_mahasiswa_dashboard_window.lineNama.setText(nama)
+                npm = self.ui_mahasiswa_dashboard_window.lineNpminput.setText(npm)
+                jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentText(jurusan)
+                alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.setText(alamat)
+
+                self.selected_id_mahasiswa = id_mahasiswa
 
     def update_mahasiswa(self):
         nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
@@ -121,21 +137,6 @@ class MainWindow(QMainWindow, Ui_Form):
         except Exception as e:
             QMessageBox.warning(self,"Informasi", "Gagal Mengedit Data: {e}")
 
-    def on_table_klik(self):
-            row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
-            if row!= -1:
-                id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 0).text()
-                nama = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 1).text()
-                npm = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 2).text()
-                jurusan = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 3).text()
-                alamat = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 4).text()
-                
-                nama = self.ui_mahasiswa_dashboard_window.lineNama.setText(nama)
-                npm = self.ui_mahasiswa_dashboard_window.lineNpminput.setText(npm)
-                jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentText(jurusan)
-                alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.setText(alamat)
-
-                self.selected_id_mahasiswa = id_mahasiswa
     def delete_mahasiswa(self):
         row = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.currentRow()
         if row!= -1:
