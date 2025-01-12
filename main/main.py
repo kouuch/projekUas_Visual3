@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QTableWidgetItem
 from getstarted import Ui_Form
 from Login import Ui_Form as Ui_Login
 from mainDashboard import Ui_Dialog as Ui_mainDashboard
@@ -69,7 +69,35 @@ class MainWindow(QMainWindow, Ui_Form):
         alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.text()
 
         add_mahasiswa(nama, npm, jurusan, alamat)
-        QMessageBox.warning(self, "Data Berhasil di Tambahkan")
+        QMessageBox.information(self, "Data Berhasil di Tambahkan")
+
+    def update_mahasiswa(self):
+        nama = self.ui_mahasiswa_dashboard_window.lineNama.text()
+        npm = self.ui_mahasiswa_dashboard_window.lineNpminput.text()
+        jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.currentText()
+        alamat = self.ui_mahasiswa_dashboard_window.lineAlamat.text()
+
+        up_mahasiswa(nama, npm, jurusan, alamat)
+        QMessageBox.information(self, "Data Berhasil di Ubah")
+
+    def delete_mahasiswa(self):
+        id_mahasiswa = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.setRowCount(0)
+
+        up_mahasiswa(id_mahasiswa)
+        QMessageBox.information(self, "Data Berhasil di Hapus")
+
+    def show_data_mahasiswa(self):
+        mahasiswa_list = get_mahasiswa()
+        
+        self.ui_mahasiswa_dashboard_window.tbldmahasiswa.setRowCount(0)
+
+        for row_number, row_data in enumerate(mahasiswa_list):
+            self.ui_mahasiswa_dashboard_window.tbldmahasiswa.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.ui_mahasiswa_dashboard_window.tbldmahasiswa.setItem(row_number,column_number, QTableWidgetItem(str(data)))
+
+            
+        
 
     def show_laporan_dashboard(self):
         self.dasboard_window.hide()
