@@ -8,7 +8,15 @@ def export_to_excel():
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     
-    file_path = os.path.join(folder_path, "data_mahasiswa.xlsx")
+    base_filename = "data_mahasiswa"
+    file_extension = ".xlsx"
+    counter = 1
+    file_path = os.path.join(folder_path, f"{base_filename}{file_extension}")
+    
+    while os.path.exists(file_path):
+        file_path = os.path.join(folder_path, f"{base_filename}_{counter}{file_extension}")
+        counter += 1
+
     mahasiswa_list = get_mahasiswa()
 
     data = {
