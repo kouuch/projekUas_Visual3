@@ -97,7 +97,7 @@ class MainWindow(QMainWindow, Ui_Form):
             jurusan = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 3).text()
             alamat = self.ui_mahasiswa_dashboard_window.tbldmahasiswa.item(row, 4).text()
             print(row)
-            # tampil
+            
             nama = self.ui_mahasiswa_dashboard_window.lineNama.setText(nama)
             npm = self.ui_mahasiswa_dashboard_window.lineNpminput.setText(npm)
             jurusan = self.ui_mahasiswa_dashboard_window.cmbJurusan.setCurrentText(jurusan)
