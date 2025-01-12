@@ -8,6 +8,7 @@ from laporanDashboard import Ui_Dialog as Ui_laporan
 from database import add_mahasiswa, up_mahasiswa, del_mahasiswa, get_mahasiswa
 from exportpdf import export_to_pdf
 from exportexcel import export_to_excel
+from login_system import login
 
 class MainWindow(QMainWindow, Ui_Form):
     def __init__(self):
@@ -29,12 +30,10 @@ class MainWindow(QMainWindow, Ui_Form):
         self.login_window.show()
 
     def validate_login(self):
-        d_npm = "rifky"
-        d_password = "apeboy"
         input_npm = self.ui_login.lineNpm.text()
         input_password = self.ui_login.linePassword.text()
 
-        if input_npm == d_npm and input_password == d_password:
+        if login(input_npm, input_password):
             self.show_dashboard()
         else:
             QMessageBox.warning(self, "Login Failed", "NPM or Password is incorrect!")
