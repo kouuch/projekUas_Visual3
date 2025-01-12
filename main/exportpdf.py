@@ -7,17 +7,17 @@ def export_to_pdf():
     file_path = "data_mahasiswa.pdf"
     c = canvas.Canvas(file_path, pagesize=letter)
 
-    c.setFont("Poppins-Bold", 16)
+    c.setFont("Helvetica-Bold", 16)
     c.drawString(200, 750, "Laporan Data Mahasiswa")
     
-    c.setFont("Poppins", 12)
+    c.setFont("Helvetica", 12)
     c.drawString(50, 720, "ID Mahasiswa")
     c.drawString(150, 720, "Nama")
     c.drawString(250, 720, "NPM")
     c.drawString(350, 720, "Jurusan")
     c.drawString(450, 720, "Alamat")
 
-    c.setFont("Poppins", 12)
+    c.setFont("Helvetica", 12)
     mahasiswa_list = get_mahasiswa()
     y_position = 700
 
