@@ -176,6 +176,7 @@ class MainWindow(QMainWindow, Ui_Form):
                 self.ui_laporan_dashboard_window.tbldmahasiswa.setItem(row_number,column_number, QTableWidgetItem(str(data)))
 
     def logout(self):
+        QMessageBox.question(self, "Peringatan!!!", "Apakah Anda Yakin Ingi Keluar?" , QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         QApplication.quit()
 
 
