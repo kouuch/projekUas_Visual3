@@ -6,7 +6,7 @@ from mainDashboard import Ui_Dialog as Ui_mainDashboard
 from mahasiswaDashboard import Ui_Dialog as Ui_mahasiswaDashboard
 from laporanDashboard import Ui_Dialog as Ui_laporan
 from database import add_mahasiswa, up_mahasiswa, del_mahasiswa, get_mahasiswa
-from exportpdf import ekport_to_pdf
+from exportpdf import export_to_pdf
 
 class MainWindow(QMainWindow, Ui_Form):
     def __init__(self):
@@ -160,7 +160,7 @@ class MainWindow(QMainWindow, Ui_Form):
         self.ui_laporan_dashboard_window.setupUi(self.laporan_dashboard_window)
 
         self.show_data_laporan()
-        self.ui_laporan_dashboard_window.eksporpdf.clicked.connect(ekport_to_pdf)
+        self.ui_laporan_dashboard_window.eksporpdf.clicked.connect(export_to_pdf)
 
         self.ui_laporan_dashboard_window.dmahasiswabtn.clicked.connect(self.show_mahasiswa_dashboard)
         self.ui_laporan_dashboard_window.logoutbtn.clicked.connect(self.logout)
