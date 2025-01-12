@@ -4,6 +4,11 @@ from PyQt5.QtWidgets import QMessageBox
 from database import get_mahasiswa
 
 def export_to_excel(self):
+    folder_path = "exportExcel"
+    if not os.patg.exits(folder_path):
+        os.makedirs(folder_path)
+    
+    file_path = os.path.join(folder_path, "data_mahasiswa.xlsx")
     mahasiswa_list = get_mahasiswa()
 
     data = {
