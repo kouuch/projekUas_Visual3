@@ -190,32 +190,8 @@ class Ui_Dialog(object):
 "    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n"
 "}")
         self.editbtn.setObjectName("editbtn")
-        self.updatebtn = QtWidgets.QPushButton(self.widget)
-        self.updatebtn.setGeometry(QtCore.QRect(250, 10, 100, 23))
-        self.updatebtn.setStyleSheet("QPushButton#updatebtn {\n"
-"    background-color: #77D0AA;\n"
-"    color: white;\n"
-"    border-radius: 5px;\n"
-"    font-family: \"Poppins\";\n"
-"    font-size: 9pt;\n"
-"    font-weight: 700;\n"
-"    line-height: normal;\n"
-"    transition: all 0.3s ease;\n"
-"}\n"
-"\n"
-"QPushButton#updatebtn:hover {\n"
-"    background-color: #55B69F;\n"
-"    transform: scale(1.1);  \n"
-"}\n"
-"\n"
-"QPushButton#updatebtn:pressed {\n"
-"    background-color: #4A9D83;\n"
-"    transform: scale(0.95);\n"
-"    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n"
-"}")
-        self.updatebtn.setObjectName("updatebtn")
         self.hapusbtn = QtWidgets.QPushButton(self.widget)
-        self.hapusbtn.setGeometry(QtCore.QRect(370, 10, 100, 23))
+        self.hapusbtn.setGeometry(QtCore.QRect(250, 10, 100, 23))
         self.hapusbtn.setStyleSheet("QPushButton#hapusbtn {\n"
 "    background-color: #77D0AA;\n"
 "    color: white;\n"
@@ -361,7 +337,6 @@ class Ui_Dialog(object):
         self.label_4.setText(_translate("Dialog", "Nama"))
         self.tambahbtn.setText(_translate("Dialog", "Tambah"))
         self.editbtn.setText(_translate("Dialog", "Edit"))
-        self.updatebtn.setText(_translate("Dialog", "Update"))
         self.hapusbtn.setText(_translate("Dialog", "Hapus"))
         self.lineNama.setPlaceholderText(_translate("Dialog", "  Masukan Nama"))
         self.label_5.setText(_translate("Dialog", "NPM"))
