@@ -30,4 +30,4 @@ def ekport_to_pdf():
         y_position-= 20
 
     c.save
-    QMessageBox.information(none, "Informasi", f"Data berhasil di eksport ke{file_path}")
+    QMessageBox.information(None, "Informasi", f"Data berhasil di eksport ke{file_path}")
