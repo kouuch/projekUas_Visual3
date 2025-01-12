@@ -28,7 +28,6 @@ def export_to_excel(self):
 
     df = pd.DataFrame(data)
 
-    file_path = "data_mahasiswa.xlsx"
     try:
         df.to_excel(file_path, index=False,engine='openpyxl')
         QMessageBox.information(self,"Informasi", f"Data berhasil diekpor ke {file_path}")
