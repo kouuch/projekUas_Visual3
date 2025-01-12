@@ -29,8 +29,8 @@ class MainWindow(QMainWindow, Ui_Form):
         self.login_window.show()
 
     def validate_login(self):
-        d_npm = "user"
-        d_password = "1"
+        d_npm = "rifky"
+        d_password = "apeboy"
         input_npm = self.ui_login.lineNpm.text()
         input_password = self.ui_login.linePassword.text()
 
